@@ -3,25 +3,25 @@
 #include <time.h>
 
 /**
- * main - prints all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
- */
+* main - Entry point
+* Return: Always 0
+*/
 
 int main(void)
-
 {
-	int i, j;
+	int p, q;
 
-	for (i = 0; i <= 99; i++)
+	for (p = 0; p <= 99; p++)
 	{
-	for (j = i + 1; j <= 99; j++)
+
+	for (q = p + 1; q <= 99; q++)
 	{
-	putchar((i / 10) + '0');
-	putchar((i % 10) + '0');
+	putchar((p / 10) + '0');
+	putchar((p % 10) + '0');
 	putchar(' ');
-	putchar((j / 10) + '0');
-	putchar((j % 10) + '0');
-	if (i == 99 || j == 99)
+	putchar((q / 10) + '0');
+	putchar((q % 10) + '0');
+	if (p == 99 && q == 99)
 	continue;
 	putchar(',');
 	putchar(' ');
